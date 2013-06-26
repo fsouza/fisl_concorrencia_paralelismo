@@ -27,7 +27,7 @@ program sequence
       end do
    else
       call mpi_recv(i, 1, MPI_INTEGER, MPI_ANY_SOURCE, MPI_ANY_TAG, &
-                    MPI_COMM_WORLD, status,ierr)
+                    MPI_COMM_WORLD, status, ierr)
       print *, i
    end if
 99 continue
