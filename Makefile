@@ -6,3 +6,6 @@ PLAN9FLAGS = -I$(PLAN9)/include/ -L$(PLAN9)/lib/ -lthread -l9 -Wno-unused-parame
 
 sequence: sequence.c
 	$(CC) $(CFLAGS) $(PLAN9FLAGS) $(LDFLAGS) -o sequence sequence.c
+
+fsequence: sequence.f90
+	mpif90 -o fsequence sequence.f90
