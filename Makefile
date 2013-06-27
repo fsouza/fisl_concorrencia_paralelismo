@@ -10,8 +10,12 @@ sequence: sequence.c
 fsequence: sequence.f90
 	mpif90 -o fsequence sequence.f90
 
-off: off.f90
-	ifort -openmp -o off off.f90
+vectors.o:
+	ifort -c vectors.f90
+
+vecadd: vecadd.f90 vectors.mod vectors.o
+	ifort -c vecadd.f90
+	ifort -openmp -o vecadd vecadd.o vectors.o
 
 vector_intrinsics: vector_intrinsics.c
 	icc -o vector_intrinsics vector_intrinsics.c
