@@ -10,6 +10,9 @@ sequence: sequence.c
 fsequence: sequence.f90
 	mpif90 -o fsequence sequence.f90
 
+off: off.f90
+	ifort -openmp -o off off.f90
+
 vector_intrinsics: vector_intrinsics.c
 	icc -o vector_intrinsics vector_intrinsics.c
 
