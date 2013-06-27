@@ -2,15 +2,18 @@
 ! Use of this source code is governed by a BSD-style
 ! license that can be found in the LICENSE file.
 
-program off
+program vecaddition
    use omp_lib
+   use vectors, only: vecadd
    implicit none
-   integer, parameter :: n = 500000
+   integer, parameter :: n = 10
    integer :: i
-   integer, dimension(n) :: values
-   !dir$ omp offload target(mic)
+   integer, dimension(n) :: a, b, c
    !$omp parallel do
    do i=1,n
-      values(i) = i ** 2
+      a(i) = i ** 2
+      b(i) = i * 2
    end do
+   call vecadd(a, b, c, n)
+   print *, c
 end program
