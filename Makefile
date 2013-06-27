@@ -12,3 +12,6 @@ fsequence: sequence.f90
 
 vector_intrinsics: vector_intrinsics.c
 	icc -o vector_intrinsics vector_intrinsics.c
+
+vector_auto: vector_auto.c
+	icc -o vector_auto vector_auto.c
