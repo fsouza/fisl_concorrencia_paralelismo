@@ -9,3 +9,6 @@ sequence: sequence.c
 
 fsequence: sequence.f90
 	mpif90 -o fsequence sequence.f90
+
+vector_intrinsics: vector_intrinsics.c
+	icc -o vector_intrinsics vector_intrinsics.c
