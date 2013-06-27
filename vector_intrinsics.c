@@ -6,7 +6,7 @@ void
 multiply(int *a, int *b, int *c, int n)
 {
 	int i;
-	register __m128i *pa, *pb, pc;
+	__m128i *pa, *pb, pc;
 	for(i = 0; i < n; i += 4) {
 		pa = (__m128i *)&a[i];
 		pb = (__m128i *)&b[i];
