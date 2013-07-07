@@ -29,3 +29,7 @@ dos mutexes", apresentada no [FISL 14](http://fisl.org.br/14/).
 #Slides
 
 <http://www.slideshare.net/franciscosouza/concorrencia-paralelismo-23871897>.
+
+#Vídeo
+
+<https://www.youtube.com/watch?v=DOQ2a64ryDg>.
