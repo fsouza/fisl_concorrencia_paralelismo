@@ -13,7 +13,7 @@ fsequence: sequence.f90
 vectors.o:
 	ifort -c vectors.f90
 
-vecadd: vecadd.f90 vectors.mod vectors.o
+vecadd: vecadd.f90 vectors.o
 	ifort -c vecadd.f90
 	ifort -openmp -o vecadd vecadd.o vectors.o
 
